@@ -4,6 +4,10 @@ body {
   font: 400 15px Lato, sans-serif;
   line-height: 1.8;
   color: #818181;
+  background-color: #f4f4f4;
+  margin: 0; 
+  padding: 0;
+  overflow-x: hidden;
 }
 
 @font-face{
@@ -59,6 +63,7 @@ h4 {
   width: 47%;
   height: auto; /* keeps the aspect ratio of images */
   transform: scaleY(0.97);
+  z-index: 2;
 }
 
 #typing {
@@ -66,6 +71,60 @@ h4 {
   top: 11%; /* Adjust this to position the text vertically */
   left: 7%; /* Adjust this to position the text horizontally */
   color: black; /* Text color */
+}
+
+.image-button {
+  position: absolute;     
+  background: none;       
+  border: none;           
+  padding: 0;             
+  cursor: pointer;        /* Single definition for pointer */
+  outline: none;          
+  width: auto;            
+  height: 70px;           
+  top: 68%;
+  left: 15%;
+  z-index: 10;            /* Ensure the button is above other elements */
+}
+
+.image-button img {
+  display: block;         
+  width: 100%;            
+  height: 100%;           
+}
+
+.button-text {
+  position: absolute;     
+  top: 50%;               
+  left: 50%;              
+  transform: translate(-50%, -50%); 
+  color: rgb(0, 0, 0);     
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;        
+  text-align: center;     
+  z-index: 11;            /* Make sure the text stays above the button */
+}
+
+.image-button:hover .button-text {
+  color: #f35695;            
+}
+
+.img-surprise {
+  position: absolute;             /* Allows positioning relative to the nearest positioned ancestor */
+  width: 290px;                   /* Set a specific width */
+  height: auto;                  /* Maintain aspect ratio */
+  top: 67%;                      /* Center vertically */
+  left: 40%;                     /* Center horizontally */
+  transform: translate(-50%, -50%) rotate(190deg); /* Adjust position to center and rotate */
+  z-index: 1;                   /* Ensure it's on top */
+}
+
+.img-sparkle1{
+  position: absolute;
+  height: 260px;
+  top: 50%; /* Adjust this to position the text vertically */
+  left: -1%; /* Adjust this to position the text horizontally */
+  z-index: 1;
 }
 
 .img-pinkpanel{
@@ -226,27 +285,34 @@ footer .glyphicon {
   -webkit-animation-duration: 1s;
   visibility: visible;
 }
-
 .marquee {
-  position: absolute;     /* Absolute positioning to place it on top of the image */
-  top: 40px;                 /* Adjust the position as necessary */
+  position: absolute;                     
+  top: 50px;                             
   left: 0;
-  width: 100%;            /* Full-width marquee */
-  color: #ffd4e6;       /* Text color */
-  font-size: 22px;        /* Adjust font size as needed */
-  font-weight: 200px;       /* Font weight */
-  background-color: rgba(255, 255, 255, 0); 
-  padding: 10px; /* Optional padding */
-  box-sizing: border-box; /* Ensure padding doesn't affect width */
-  white-space: nowrap;    /* Prevents the text from wrapping */
-  overflow: hidden;       /* Hides overflowed text */
-  animation: marquee 10s linear infinite; /* Infinite scrolling animation */
-  font-family: 'Montserrat', sans-serif;  /* Font family */
+  width: 100vw;                               /* Ensure it takes the full width of the screen */
+  height: 50px;                               /* Adjust the height as necessary */
+  overflow: hidden;                           /* Hide overflow */
+  background-color: rgba(255, 255, 255, 0); /* Transparent background */
+  box-sizing: border-box;                
 }
 
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  color: #ffd4e6;                        
+  font-size: 30px;                       
+  font-weight: 900 !important;            
+  font-family: Arial, sans-serif;        
+  animation: marquee 15s linear infinite;      /* Longer animation for smoother scrolling */
+} 
+
 @keyframes marquee {
-  0%   { transform: translateX(100%); } /* Starts off-screen to the right */
-  100% { transform: translateX(-100%); } /* Ends off-screen to the left */
+  0% {
+    transform: translateX(100%);               /* Start fully off-screen to the right */
+  }
+  100% {
+    transform: translateX(-100%);              /* End fully off-screen to the left */
+  }
 }
 
 @keyframes slide {
