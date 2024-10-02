@@ -3,8 +3,8 @@
 body {
   font: 400 15px Lato, sans-serif;
   line-height: 1.8;
-  color: #818181;
-  background-color: #f4f4f4;
+  color: #fff4e9;
+  background-color: #fff4e9;
   margin: 0; 
   padding: 0;
   overflow-x: hidden;
@@ -50,7 +50,7 @@ h4 {
   justify-content: center; /* center the images horizontally */
 }
 
-.image-container {
+.image-container1 {
   margin-bottom: 10px;
   display: flex; /* makes the container flex */
   padding-left: 50px;
@@ -134,7 +134,7 @@ h4 {
 }
 
 .bg-grey {
-  background-color: #f6f6f6;
+  background-color: #ffbfff;
 }
 .navbar-brand img.navbar-logo {
   padding-left: 25%;
@@ -305,6 +305,39 @@ footer .glyphicon {
   font-family: Arial, sans-serif;        
   animation: marquee 15s linear infinite;      /* Longer animation for smoother scrolling */
 } 
+
+.image-container2 {
+  margin-bottom: 10px;
+  display: flex; /* makes the container flex */
+  padding-left: 50px;
+  align-items: center; /* align items vertically */
+  gap: 25px; /* space between images */
+  position: relative; /* allows absolute positioning inside */
+}
+
+.img-smiley{
+  position: absolute;
+  height: 150px;
+  top: 950px;     
+  transform: rotate(7deg);                        
+  margin-top: 30px;
+  margin-left: 895px;
+}
+
+.img-about{
+  height: 350px;
+  display: block;        /* Make the image a block-level element */
+  margin-left: auto;     /* Set left margin to auto */
+  margin-right: auto;    /* Set right margin to auto */
+}
+
+.img-yellflower{
+  position: absolute;
+  height: 550px;
+  top: 1050px;                            
+  margin-top: 30px;
+  margin-left: 920px;
+}
 
 @keyframes marquee {
   0% {
