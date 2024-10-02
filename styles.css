@@ -14,35 +14,41 @@ body {
   font-family: 'League Gothic';
   src: url('Fonts/league-gothic-reg.otf')
 }
-
 @font-face{
   font-family: 'montserrat';
   src: url('Fonts/Montserrat-VariableFont_wght.ttf')
 }
+@font-face{
+  font-family: 'sifon';
+  src: url('Fonts/sifonn-basic-outline.otf')
+}
 
-h1{
+h1{  
+  font-family: 'League Gothic';
   font-size: 70px !important;
   text-transform: uppercase;
-  font-family: 'League Gothic';
   color: #000000;
   text-align: left;
 }
 h2 {
-  font-size: 24px;
+  font-family: 'sifon';
+  font-size: 90px !important;
   text-transform: uppercase;
-  color: #303030;
-  font-weight: 600;
-  margin-bottom: 30px;
+  color: #000000;
+  font-weight: 200;
+  margin-top: -80px;
+  margin-left: 30px;
 }
 h4 {
+  font-family: 'montserrat';
   font-size: 19px;
-  line-height: 1.375em;
-  color: #303030;
-  font-weight: 400;
-  margin-bottom: 30px;
+  color: #000000;
+  font-weight: 50;
+  margin-top: -30px;
+  margin-left: 180px;
 }  
 
- /* Main title screen */
+/* container: home */
 .jumbotron { 
   background-color: #fff4e9;
   padding: 130px 35px;
@@ -50,27 +56,27 @@ h4 {
   justify-content: center; /* center the images horizontally */
 }
 
-.image-container1 {
+.image-container1 {        /* contanier for clear frames */
   margin-bottom: 10px;
-  display: flex; /* makes the container flex */
+  display: flex;           /* makes the container flex */
   padding-left: 50px;
-  align-items: center; /* align items vertically */
-  gap: 25px; /* space between images */
-  position: relative; /* allows absolute positioning inside */
+  align-items: center;     /* align items vertically */
+  gap: 25px;               /* space between images */
+  position: relative;      /* allows absolute positioning inside */
 }
 
-.img-clearframe1, .img-clearframe2 {
+.img-clearframe1, .img-clearframe2 { /* clear frames */
   width: 47%;
-  height: auto; /* keeps the aspect ratio of images */
+  height: auto;                     /* keeps the aspect ratio of images */
   transform: scaleY(0.97);
   z-index: 2;
 }
 
-#typing {
+#typing {                  /* typing script */
   position: absolute;
-  top: 11%; /* Adjust this to position the text vertically */
-  left: 7%; /* Adjust this to position the text horizontally */
-  color: black; /* Text color */
+  top: 11%;                /* adjust this to position the text vertically */
+  left: 7%;                /* adjust this to position the text horizontally */
+  color: black;          /* text color */
 }
 
 .image-button {
@@ -78,13 +84,13 @@ h4 {
   background: none;       
   border: none;           
   padding: 0;             
-  cursor: pointer;        /* Single definition for pointer */
+  cursor: pointer;         /* single definition for pointer */
   outline: none;          
   width: auto;            
   height: 70px;           
   top: 68%;
   left: 15%;
-  z-index: 10;            /* Ensure the button is above other elements */
+  z-index: 10;             /* ensure the button is above other elements */
 }
 
 .image-button img {
@@ -110,13 +116,13 @@ h4 {
 }
 
 .img-surprise {
-  position: absolute;             /* Allows positioning relative to the nearest positioned ancestor */
-  width: 290px;                   /* Set a specific width */
-  height: auto;                  /* Maintain aspect ratio */
-  top: 67%;                      /* Center vertically */
-  left: 40%;                     /* Center horizontally */
-  transform: translate(-50%, -50%) rotate(190deg); /* Adjust position to center and rotate */
-  z-index: 1;                   /* Ensure it's on top */
+  position: absolute;     /* Allows positioning relative to the nearest positioned ancestor */
+  width: 290px;           /* Set a specific width */
+  height: auto;           /* Maintain aspect ratio */
+  top: 67%;               /* Center vertically */
+  left: 40%;              /* Center horizontally */
+  transform: translate(-50%, -50%) rotate(190deg); 
+  z-index: 1;             /* Ensure it's on top */
 }
 
 .img-sparkle1{
@@ -133,9 +139,6 @@ h4 {
   height: 90px;
 }
 
-.bg-grey {
-  background-color: #ffbfff;
-}
 .navbar-brand img.navbar-logo {
   padding-left: 25%;
   height: 110px; /* Adjust the height of the logo */
@@ -277,6 +280,7 @@ footer .glyphicon {
   margin-bottom: 20px;
   color: #f4511e;
 }
+
 .slideanim {visibility:hidden;}
 .slide {
   animation-name: slide;
@@ -306,6 +310,11 @@ footer .glyphicon {
   animation: marquee 15s linear infinite;      /* Longer animation for smoother scrolling */
 } 
 
+/* container: about me */
+#about {
+  min-height: 500px; /* Adjust this value to make the container longer */
+}
+
 .image-container2 {
   margin-bottom: 10px;
   display: flex; /* makes the container flex */
@@ -333,18 +342,51 @@ footer .glyphicon {
 
 .img-yellflower{
   position: absolute;
-  height: 550px;
-  top: 1050px;                            
+  height: 200px;
+  top: 1250px;                            
   margin-top: 30px;
-  margin-left: 920px;
+  margin-left: 1320px;
+  z-index: -1;
+}
+
+.text-container {
+  width: 90vw;               /* Set the width less than 100% for horizontal centering */
+  max-width: 1860px;             /* Set the width of the container */
+  margin-top: 0px;
+  padding-left: 30px;                 /* Add padding inside the container */
+  background-color: #fff4e9;  /* Background color of the container */
+  border-radius: 8px;           /* Rounded corners */
+  font-family: 'montserrat'; /* Set the font */
+  font-weight: 10;
+  color: #333;                /* Text color */
+  z-index: 1;
+}
+
+.text-container p {
+  font-size: 30px;              /* Size of the text */
+  line-height: 1.6;             /* Spacing between lines */
+}
+
+.img-pinkflower{
+  position: absolute;
+  height: 200px;
+  top: 1750px;                            
+  margin-top: 30px;
+  padding-right: 500px;
+  z-index: 1;
+}
+
+/* diffrenet panel colors */
+.bg-grey {  
+  background-color: #ffbfff;
 }
 
 @keyframes marquee {
   0% {
-    transform: translateX(100%);               /* Start fully off-screen to the right */
+    transform: translateX(100%); /* Start fully off-screen to the right */
   }
   100% {
-    transform: translateX(-100%);              /* End fully off-screen to the left */
+    transform: translateX(-100%);/* End fully off-screen to the left */
   }
 }
 
